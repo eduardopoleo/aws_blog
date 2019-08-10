@@ -1,0 +1,1 @@
+curl localhost:3000/posts/3
