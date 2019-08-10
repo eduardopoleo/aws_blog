@@ -1,3 +1,1 @@
-curl -d '{"title":"Post Title", "body":"Post Body"}'\
--H "Content-Type: application/json"\
--X POST http://localhost:3000/posts
+curl -d '{"title":"Post Title", "body":"Post Body"}' -H "Content-Type: application/json" -X POST http://ec2-3-83-66-112.compute-1.amazonaws.com:3000/posts -v

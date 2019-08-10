@@ -1,1 +1,1 @@
-curl localhost:3000/posts/3
+curl http://ec2-3-83-66-112.compute-1.amazonaws.com:3000/posts/7
