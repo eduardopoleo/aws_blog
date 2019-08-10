@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   def show
     post = Post.find(params[:id])
 
+    sleep(1)
+
     render json: { title: post.title, body: post.body }.to_json
   end
 
