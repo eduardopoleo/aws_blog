@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: aws_blog_production
-  username: aws_blog
-  password: <%= ENV['AWS_BLOG_DATABASE_PASSWORD'] %>
