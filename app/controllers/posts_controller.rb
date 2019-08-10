@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    require 'pry'; binding.pry
     new_post = Post.create(post_params)
     render json: { post: new_post }.to_json
   end
