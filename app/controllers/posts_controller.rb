@@ -6,18 +6,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    respond_to do |format|
-      format.json {
-        new_post = Post.create(post_params)
-
-        render json: { post: new_post }.to_json
-      }
-    end
+    require 'pry'; binding.pry
+    new_post = Post.create(post_params)
+    render json: { post: new_post }.to_json
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.permit(:title, :body)
   end
 end
