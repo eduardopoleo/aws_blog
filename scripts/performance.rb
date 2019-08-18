@@ -30,7 +30,7 @@ for i in 0..users
   Thread.new do
     begin
       while true
-        response = execute_request($verb, uri) # => String
+        execute_request($verb, uri) # => String
         $requests += 1
       end
     rescue StandardError => e

@@ -9,6 +9,9 @@ class PostsController < ApplicationController
 
   def create
     new_post = Post.create(post_params)
+
+    sleep(1)
+
     render json: { post: new_post }.to_json, status: 201
   end
 
