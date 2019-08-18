@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
   def show
-    post = Post.find(params[:id])
+    post = Rails.cache.fetch(params[:id], expires_in: 1.minute) do
+      sleep(1)
+      post = Post.find(params[:id]).to_json
+    end
 
-    sleep(1)
-
-    render json: { title: post.title, body: post.body }.to_json
+    render json: post
   end
 
   def create
