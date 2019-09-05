@@ -80,4 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: aws_blog_production
+  database: aws_blog
+  username: postgres
+  password: password
+  host: aws-blog.ceaq3vbveoky.us-east-1.rds.amazonaws.com
+  port: 5432
